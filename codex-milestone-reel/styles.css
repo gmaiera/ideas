@@ -192,6 +192,7 @@ h3 {
 .scoreboard,
 .timeline-section,
 .wins,
+.reflection,
 .cta {
   padding: clamp(54px, 8vw, 108px) clamp(20px, 6vw, 84px);
 }
@@ -335,6 +336,72 @@ h3 {
   background: var(--paper);
 }
 
+.reflection {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 70px);
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(199, 70, 52, 0.08), transparent 30%),
+    linear-gradient(315deg, rgba(22, 119, 184, 0.09), transparent 34%),
+    var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.reflection-media {
+  position: relative;
+  min-height: 540px;
+}
+
+.portrait {
+  position: absolute;
+  inset: 0 8% 96px 0;
+  width: 82%;
+  height: calc(100% - 96px);
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.oracle-mark {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(58%, 280px);
+  border: 1px solid rgba(199, 70, 52, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 16px 42px rgba(16, 24, 32, 0.12);
+}
+
+.reflection-copy {
+  max-width: 820px;
+}
+
+.reflection-copy p {
+  color: var(--muted);
+  font-size: 1.13rem;
+}
+
+.reflection-copy blockquote {
+  margin: 28px 0;
+  border-left: 6px solid var(--rust);
+  padding: 14px 0 14px 24px;
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.12;
+}
+
+.reflection-copy .recommendation {
+  display: inline-block;
+  margin-top: 8px;
+  border-radius: 8px;
+  padding: 18px 20px;
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 850;
+}
+
 .cta {
   text-align: center;
 }
@@ -352,6 +419,7 @@ h3 {
   .hero,
   .data-band,
   .wins,
+  .reflection,
   .section-heading {
     grid-template-columns: 1fr;
   }
@@ -372,6 +440,10 @@ h3 {
   .timeline article {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .reflection-media {
+    min-height: 460px;
   }
 }
 
