@@ -349,28 +349,39 @@ h3 {
 }
 
 .reflection-media {
-  position: relative;
+  display: grid;
+  grid-template-rows: minmax(420px, 1fr) auto;
+  gap: 18px;
   min-height: 540px;
 }
 
 .portrait {
-  position: absolute;
-  inset: 0 8% 96px 0;
-  width: 82%;
-  height: calc(100% - 96px);
+  width: min(88%, 460px);
+  height: 100%;
+  min-height: 420px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: var(--shadow);
 }
 
-.oracle-mark {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: min(58%, 280px);
+.oracle-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(92%, 520px);
+  min-height: 108px;
+  padding: 26px 30px;
+  background: var(--white);
   border: 1px solid rgba(199, 70, 52, 0.18);
   border-radius: 8px;
   box-shadow: 0 16px 42px rgba(16, 24, 32, 0.12);
+}
+
+.oracle-lockup img {
+  display: block;
+  width: 100%;
+  max-height: 64px;
+  object-fit: contain;
 }
 
 .reflection-copy {
@@ -443,7 +454,7 @@ h3 {
   }
 
   .reflection-media {
-    min-height: 460px;
+    min-height: 0;
   }
 }
 
@@ -463,5 +474,23 @@ h3 {
   .metric-grid,
   .wins-grid {
     grid-template-columns: 1fr;
+  }
+
+  .reflection-media {
+    grid-template-rows: auto auto;
+  }
+
+  .portrait,
+  .oracle-lockup {
+    width: 100%;
+  }
+
+  .portrait {
+    min-height: 360px;
+  }
+
+  .oracle-lockup {
+    min-height: 86px;
+    padding: 22px;
   }
 }
