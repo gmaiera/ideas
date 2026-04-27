@@ -152,3 +152,8 @@ Instead of selling "replacement," sell:
 - Choose one beachhead workflow.
 - Build a sample AI operating dashboard mockup.
 - Decide whether the provocative tagline is only internal or can survive external use.
+
+## Generated Artifacts
+
+- `Fork Partner Pitch - Research Draft.md`
+- `Fork Partner Pitch - V2.md`
